@@ -14,12 +14,14 @@ namespace XeroApi.Validation
             : base(null, null)
         { }
 
+        public const string AccountCode = "AccountCode";
+
         protected override void DoValidate(LineItem objectToValidate, object currentTarget, string key, ValidationResults validationResults)
         {
             if (objectToValidate.AccountCode.IsNullOrWhiteSpace())
             {
                 if (objectToValidate.GetTotal() != 0)
-                    validationResults.AddResult(new ValidationResult("No AccountCode Specified", currentTarget, key, "AccountCode", this));
+                    validationResults.AddResult(new ValidationResult("No AccountCode Specified", currentTarget, key, AccountCode, this));
             }
 
             if (objectToValidate.Description.IsNullOrWhiteSpace())

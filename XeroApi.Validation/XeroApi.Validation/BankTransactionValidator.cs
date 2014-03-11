@@ -35,7 +35,11 @@ namespace XeroApi.Validation
                 ValidationResults vr = new ValidationResults();
                 foreach (var item in objectToValidate.LineItems)
                 {
-                    lineItemValidator.Validate(item, vr);
+                    var valResults = lineItemValidator.Validate(item).AsEnumerable();
+                    if (objectToValidate.Type.EndsWith("OVERPAYMENT"))
+                        valResults = valResults.Where(a => a.Tag != LineItemValidator.AccountCode);
+
+                    vr.AddAllResults(valResults);
 
                     bool? isValidTax = item.IsValidTax();
                     if (isValidTax.HasValue && !isValidTax.Value)
