@@ -48,7 +48,7 @@ namespace XeroApi.Validation
                     validationResults.AddResult(new ValidationResult("Invalid LineItems", currentTarget, key, "LineItems", this, vr));
                 }
 
-                if (objectToValidate.LineItems.GetTotal() <= 0)
+                if (objectToValidate.LineItems.GetTotal() < 0)
                 {
                     validationResults.AddResult(new ValidationResult("The LineItems total must be greater than 0.", currentTarget, key, "LineItems", this));
                 }
@@ -60,7 +60,7 @@ namespace XeroApi.Validation
                 {
                     validationResults.AddResult(new ValidationResult("The document total does not equal the sum of the lines.", currentTarget, key, "Total", this));
                 }
-                if (objectToValidate.Total.Value <= 0)
+                if (objectToValidate.Total.Value < 0)
                 {
                     validationResults.AddResult(new ValidationResult("The document total must be greater than 0.", currentTarget, key, "Total", this));
                 }
@@ -72,7 +72,7 @@ namespace XeroApi.Validation
                 {
                     validationResults.AddResult(new ValidationResult("The document subtotal does not equal the sum of the lines.", currentTarget, key, "SubTotal", this));
                 }
-                if (objectToValidate.SubTotal.Value <= 0)
+                if (objectToValidate.SubTotal.Value < 0)
                 {
                     validationResults.AddResult(new ValidationResult("The document subtotal must be greater than 0.", currentTarget, key, "SubTotal", this));
                 }
