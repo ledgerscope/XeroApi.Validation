@@ -102,6 +102,11 @@ namespace XeroApi.Validation
                     validationResults.AddResult(new ValidationResult("Document InvoiceNumber must be specified.", currentTarget, key, "InvoiceNumber", this));
                 }
             }
+
+            if (!objectToValidate.DueDate.HasValue)
+            {
+                validationResults.AddResult(new ValidationResult("DueDate must be specified.", currentTarget, key, "DueDate", this));
+            }
         }
 
         protected override string DefaultMessageTemplate
