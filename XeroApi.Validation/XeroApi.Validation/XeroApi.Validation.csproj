@@ -50,8 +50,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="XeroApi">
-      <HintPath>..\packages\XeroAPI.Net.1.1.0.33\lib\XeroApi.dll</HintPath>
+    <Reference Include="XeroApi, Version=1.1.0.33, Culture=neutral, PublicKeyToken=3de03a85ae0f7251, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\LedgerscopeXeroApi.1.3.1\lib\net45\XeroApi.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
