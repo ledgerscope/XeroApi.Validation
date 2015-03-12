@@ -58,6 +58,7 @@
     <Compile Include="BankTransactionValidator.cs" />
     <Compile Include="CreditNoteValidator.cs" />
     <Compile Include="Helpers\DecimalHelper.cs" />
+    <Compile Include="Helpers\JournalLineHelper.cs" />
     <Compile Include="Helpers\LineItemHelper.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Helpers\TaxHelper.cs" />
