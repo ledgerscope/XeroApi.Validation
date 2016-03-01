@@ -20,7 +20,7 @@ namespace XeroApi.Validation
         {
             if (objectToValidate.AccountCode.IsNullOrWhiteSpace())
             {
-                if (objectToValidate.GetTotal() != 0)
+                if (objectToValidate.GetLineItemTotal() != 0)
                     validationResults.AddResult(new ValidationResult("No AccountCode Specified", currentTarget, key, AccountCode, this));
             }
 
@@ -78,13 +78,13 @@ namespace XeroApi.Validation
 
             if (objectToValidate.TaxAmount.HasValue)
             {
-                if (Math.Sign(objectToValidate.TaxAmount.Value * objectToValidate.GetSubTotal()) == -1)
+                if (Math.Sign(objectToValidate.TaxAmount.Value * objectToValidate.GetLineItemSubTotal()) == -1)
                 {
                     validationResults.AddResult(new ValidationResult("TaxAmount must be same sign as LineAmount", currentTarget, key, "TaxAmount", this));
                 }
                 else
                 {
-                    if (Math.Abs(objectToValidate.TaxAmount.GetValueOrDefault()) > Math.Abs(objectToValidate.GetSubTotal()))
+                    if (Math.Abs(objectToValidate.TaxAmount.GetValueOrDefault()) > Math.Abs(objectToValidate.GetLineItemSubTotal()))
                     {
                         validationResults.AddResult(new ValidationResult("TaxAmount cannot be greater than the LineAmount", currentTarget, key, "TaxAmount", this));
                     }

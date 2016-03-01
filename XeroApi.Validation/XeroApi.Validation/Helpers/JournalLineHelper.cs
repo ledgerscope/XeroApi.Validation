@@ -18,12 +18,12 @@ namespace XeroApi.Validation.Helpers
 
         public static decimal GetJournalSubTotal(this IEnumerable<LineItem> li)
         {
-            return li.Sum(a => a.GetSubTotal());
+            return li.Sum(a => a.GetLineItemSubTotal());
         }
 
         public static decimal GetJournalTotal(this IEnumerable<LineItem> li)
         {
-            return li.Sum(a => a.GetTotal());
+            return li.Sum(a => a.GetLineItemTotal());
         }
     }
 }
