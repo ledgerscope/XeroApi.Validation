@@ -1,30 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using XeroApi.Model;
+using Xero.Api.Core.Model;
 
 namespace XeroApi.Validation.Helpers
 {
     public static class JournalLineHelper
     {
-        public static decimal GetTotal(this JournalLine li)
+        public static decimal GetJournalTotal(this LineItem li)
         {
-            return GetSubTotal(li) + li.TaxAmount;
+            return GetJournalSubTotal(li) + li.TaxAmount.GetValueOrDefault();
         }
 
-        public static decimal GetSubTotal(this JournalLine li)
+        public static decimal GetJournalSubTotal(this LineItem li)
         {
-            return li.NetAmount;
+            return li.LineAmount.GetValueOrDefault();
         }
 
-        public static decimal GetSubTotal(this IEnumerable<JournalLine> li)
+        public static decimal GetJournalSubTotal(this IEnumerable<LineItem> li)
         {
             return li.Sum(a => a.GetSubTotal());
         }
 
-        public static decimal GetTotal(this IEnumerable<JournalLine> li)
+        public static decimal GetJournalTotal(this IEnumerable<LineItem> li)
         {
             return li.Sum(a => a.GetTotal());
         }

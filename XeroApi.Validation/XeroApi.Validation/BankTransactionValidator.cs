@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using XeroApi.Model;
+using Xero.Api.Core.Model;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 using XeroApi.Validation.Helpers;
 using Microsoft.Practices.Unity;
+using Xero.Api.Core.Model.Types;
+using XeroApi.Validation.Extensions;
 
 namespace XeroApi.Validation
 {
@@ -36,7 +38,7 @@ namespace XeroApi.Validation
                 foreach (var item in objectToValidate.LineItems)
                 {
                     var valResults = lineItemValidator.Validate(item).AsEnumerable();
-                    if (objectToValidate.Type.EndsWith("OVERPAYMENT"))
+                    if (objectToValidate.Type.IsOverpayment())
                         valResults = valResults.Where(a => a.Tag != LineItemValidator.AccountCode);
 
                     vr.AddAllResults(valResults);
@@ -87,17 +89,16 @@ namespace XeroApi.Validation
             {
                 if (objectToValidate.TotalTax.Value != objectToValidate.LineItems.Sum(a => a.TaxAmount))
                 {
-                    validationResults.AddResult(new ValidationResult("The document totaltax does not equal the sum of the lines.", currentTarget, key, "TotalTax", this));
+                    validationResults.AddResult(
+                        new ValidationResult("The document totaltax does not equal the sum of the lines.", currentTarget,
+                            key, "TotalTax", this));
                 }
                 if (objectToValidate.TotalTax.Value < 0)
                 {
-                    validationResults.AddResult(new ValidationResult("The document totaltax must be greater than or equal to 0.", currentTarget, key, "TotalTax", this));
+                    validationResults.AddResult(
+                        new ValidationResult("The document totaltax must be greater than or equal to 0.", currentTarget,
+                            key, "TotalTax", this));
                 }
-            }
-
-            if (string.IsNullOrEmpty(objectToValidate.Type))
-            {
-                validationResults.AddResult(new ValidationResult("Document Type must be specified.", currentTarget, key, "Type", this));
             }
         }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using XeroApi.Model;
+using Xero.Api.Core.Model;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 using XeroApi.Validation.Helpers;
 using Microsoft.Practices.Unity;
@@ -90,12 +90,7 @@ namespace XeroApi.Validation
                 }
             }
 
-            if (string.IsNullOrEmpty(objectToValidate.Type))
-            {
-                validationResults.AddResult(new ValidationResult("Document Type must be specified.", currentTarget, key, "Type", this));
-            }
-
-            if (string.IsNullOrEmpty(objectToValidate.CreditNoteNumber))
+            if (string.IsNullOrEmpty(objectToValidate.Number))
             {
                 validationResults.AddResult(new ValidationResult("Document CreditNoteNumber must be specified.", currentTarget, key, "CreditNoteNumber", this));
             }

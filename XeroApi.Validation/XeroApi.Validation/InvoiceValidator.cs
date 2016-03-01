@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using XeroApi.Model;
+using Xero.Api.Core.Model;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 using XeroApi.Validation.Helpers;
 using Microsoft.Practices.Unity;
+using Xero.Api.Core.Model.Types;
 
 namespace XeroApi.Validation
 {
@@ -90,14 +91,9 @@ namespace XeroApi.Validation
                 }
             }
 
-            if (string.IsNullOrEmpty(objectToValidate.Type))
+            if (objectToValidate.Type == InvoiceType.AccountsReceivable)
             {
-                validationResults.AddResult(new ValidationResult("Document Type must be specified.", currentTarget, key, "Type", this));
-            }
-
-            if (objectToValidate.Type == "ACCREC")
-            {
-                if (string.IsNullOrEmpty(objectToValidate.InvoiceNumber))
+                if (string.IsNullOrEmpty(objectToValidate.Number))
                 {
                     validationResults.AddResult(new ValidationResult("Document InvoiceNumber must be specified.", currentTarget, key, "InvoiceNumber", this));
                 }

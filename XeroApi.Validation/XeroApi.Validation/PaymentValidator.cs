@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using XeroApi.Model;
+using Xero.Api.Core.Model;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 
 namespace XeroApi.Validation
@@ -27,7 +27,7 @@ namespace XeroApi.Validation
             }
             else
             {
-                if (objectToValidate.Invoice.InvoiceID == Guid.Empty && string.IsNullOrEmpty(objectToValidate.Invoice.InvoiceNumber))
+                if (objectToValidate.Invoice.Id == Guid.Empty && string.IsNullOrEmpty(objectToValidate.Invoice.Number))
                 {
                     validationResults.AddResult(new ValidationResult("Either InvoiceID or InvoiceNumber must be specified.", currentTarget, key, "Invoice", this));
                 }
@@ -39,7 +39,7 @@ namespace XeroApi.Validation
             }
             else
             {
-                if (objectToValidate.Account.AccountID == Guid.Empty && string.IsNullOrEmpty(objectToValidate.Account.Code))
+                if (objectToValidate.Account.Id == Guid.Empty && string.IsNullOrEmpty(objectToValidate.Account.Code))
                 {
                     validationResults.AddResult(new ValidationResult("Either AccountID or Code must be specified.", currentTarget, key, "Account", this));
                 }

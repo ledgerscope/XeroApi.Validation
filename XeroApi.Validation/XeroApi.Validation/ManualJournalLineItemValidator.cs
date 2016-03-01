@@ -3,18 +3,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using XeroApi.Model;
+using Xero.Api.Core.Model;
 using XeroApi.Validation.Helpers;
 
 namespace XeroApi.Validation
 {
-    public class ManualJournalLineItemValidator : Validator<ManualJournalLineItem>
+    public class ManualJournalLineItemValidator : Validator<LineItem>
     {
         public ManualJournalLineItemValidator()
             : base(null, null)
         { }
 
-        protected override void DoValidate(ManualJournalLineItem objectToValidate, object currentTarget, string key, ValidationResults validationResults)
+        protected override void DoValidate(LineItem objectToValidate, object currentTarget, string key, ValidationResults validationResults)
         {
             if (objectToValidate.AccountCode.IsNullOrWhiteSpace())
             {

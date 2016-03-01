@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using XeroApi.Model;
+using Xero.Api.Core.Model;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 using XeroApi.Validation.Helpers;
 
