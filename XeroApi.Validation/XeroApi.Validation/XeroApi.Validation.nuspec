@@ -1,26 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-    <metadata>
-        <id>XeroApi.Validation</id>
-        <version>2.0.0.0</version>
-        <title>XeroApi.Validation</title>
-        <authors>matthewsteeples</authors>
-        <owners>matthewsteeples</owners>
-        <projectUrl>https://github.com/XeroAPI/XeroAPI.Net</projectUrl>
-        <iconUrl>https://secure.gravatar.com/avatar/7fff030fb8040a5157c3fd463858167f.png?s=128</iconUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Client side validation methods for XeroAPI.Net</description>
-        <releaseNotes></releaseNotes>
-        <copyright>Copyright 2012</copyright>
-        <tags>Xero</tags>
-        <dependencies>
-            <dependency id="EnterpriseLibrary.Validation" version="6.0.1304.0" />
-            <dependency id="Unity" version="3.0.1304.1" />
-            <dependency id="LedgerscopeXeroApi" version="1.3.1.0" />
-        </dependencies>
-    </metadata>
-    <files>
-        <file src="bin\Debug\XeroApi.Validation.dll" target="lib\net45\XeroApi.Validation.dll" />
-        <file src="bin\Debug\XeroApi.Validation.pdb" target="lib\net45\XeroApi.Validation.pdb" />
-    </files>
+  <metadata>
+    <id>XeroApi.Validation</id>
+    <version>2.1.0.1</version>
+    <title>XeroApi.Validation</title>
+    <authors>matthewsteeples</authors>
+    <owners>matthewsteeples</owners>
+    <projectUrl>https://github.com/MatthewSteeples/XeroApi.Validation</projectUrl>
+    <iconUrl>https://secure.gravatar.com/avatar/7fff030fb8040a5157c3fd463858167f.png?s=128</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Client side validation methods for XeroAPI.Net
+
+      **** UPDATED ****
+      This package now depends on the new (supported) official Xero wrapper library
+    </description>
+    <releaseNotes>
+      **** UPDATED ****
+      This package now depends on the new (supported) official Xero wrapper library
+    </releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Xero</tags>
+    <dependencies>
+      <dependency id="EnterpriseLibrary.Validation" version="6.0.1304.0" />
+      <dependency id="Unity" version="3.5.1404.0" />
+      <dependency id="Xero.API.SDK.Minimal" version="2.1.1.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Debug\XeroApi.Validation.dll" target="lib\net45\XeroApi.Validation.dll" />
+    <file src="bin\Debug\XeroApi.Validation.pdb" target="lib\net45\XeroApi.Validation.pdb" />
+  </files>
 </package>
