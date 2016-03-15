@@ -5,9 +5,9 @@ using XeroApi.Validation.Helpers;
 
 namespace XeroApi.Validation
 {
-    public class ManualJournalLineItemValidator : Validator<Line>
+    public class ManualJournalLineValidator : Validator<Line>
     {
-        public ManualJournalLineItemValidator()
+        public ManualJournalLineValidator()
             : base(null, null)
         { }
 

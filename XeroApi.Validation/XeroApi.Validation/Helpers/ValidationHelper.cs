@@ -21,7 +21,7 @@ namespace XeroApi.Validation.Helpers
             container.RegisterType(typeof(Validator<BankTransaction>), typeof(BankTransactionValidator));
             container.RegisterType(typeof(Validator<Payment>), typeof(PaymentValidator));
             container.RegisterType(typeof(Validator<ManualJournal>), typeof(ManualJournalValidator));
-            container.RegisterType(typeof(Validator<Line>), typeof(ManualJournalLineItemValidator));
+            container.RegisterType(typeof(Validator<Line>), typeof(ManualJournalLineValidator));
         }
 
         public static ValidationResults Validate<T>(this T i) where T : CoreData
