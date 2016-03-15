@@ -11,9 +11,9 @@ namespace XeroApi.Validation
 {
     public class ManualJournalValidator : Validator<ManualJournal>
     {
-        Validator<LineItem> lineItemValidator = null;
+        Validator<Line> lineItemValidator = null;
 
-        public ManualJournalValidator(Validator<LineItem> lineItemValidator)
+        public ManualJournalValidator(Validator<Line> lineItemValidator)
             : base(null, null)
         {
             this.lineItemValidator = lineItemValidator;
@@ -22,7 +22,7 @@ namespace XeroApi.Validation
         public ManualJournalValidator()
             : base(null, null)
         {
-            this.lineItemValidator = ValidationHelper.Container.Resolve<Validator<LineItem>>();
+            this.lineItemValidator = ValidationHelper.Container.Resolve<Validator<Line>>();
         }
 
         protected override void DoValidate(ManualJournal objectToValidate, object currentTarget, string key, ValidationResults validationResults)

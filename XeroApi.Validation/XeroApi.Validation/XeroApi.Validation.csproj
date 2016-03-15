@@ -81,7 +81,7 @@
     <Compile Include="Helpers\ValidationHelper.cs" />
     <Compile Include="InvoiceValidator.cs" />
     <Compile Include="LineItemValidator.cs" />
-    <Compile Include="ManualJournalLineItemValidator.cs" />
+    <Compile Include="ManualJournalLineValidator.cs" />
     <Compile Include="ManualJournalValidator.cs" />
     <Compile Include="Model\Country.cs" />
     <Compile Include="Model\TaxcodeData.cs" />
