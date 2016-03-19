@@ -61,11 +61,11 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Xero.Api, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xero.API.SDK.Minimal.2.1.1.2\lib\net40\Xero.Api.dll</HintPath>
+      <HintPath>..\packages\Xero.API.SDK.Minimal.2.1.4.0\lib\net40\Xero.Api.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xero.Api.Example.Applications, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xero.API.SDK.Minimal.2.1.1.2\lib\net40\Xero.Api.Example.Applications.dll</HintPath>
+      <HintPath>..\packages\Xero.API.SDK.Minimal.2.1.4.0\lib\net40\Xero.Api.Example.Applications.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
