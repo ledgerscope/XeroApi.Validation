@@ -18,6 +18,11 @@ namespace XeroApi.Validation
                 validationResults.AddResult(new ValidationResult("No AccountCode Specified", currentTarget, key, "AccountCode", this));
             }
 
+            if (objectToValidate.Description.IsNullOrWhiteSpace())
+            {
+                validationResults.AddResult(new ValidationResult("No Description Specified", currentTarget, key, "Description", this));
+            }
+
             if (objectToValidate.Amount == 0)
             {
                 validationResults.AddResult(new ValidationResult("LineAmount must be not equal to 0", currentTarget, key, "LineAmount", this));
