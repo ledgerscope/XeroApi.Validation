@@ -33,7 +33,7 @@ namespace XeroApi.Validation
             {
                 if (!objectToValidate.AccountCode.IsNullOrWhiteSpace())
                 {
-                    if (objectToValidate.LineAmount == 0)
+                    if (objectToValidate.LineAmount == 0 && !string.IsNullOrEmpty(objectToValidate.AccountCode))
                     {
                         validationResults.AddResult(new ValidationResult("LineAmount must be not equal to 0", currentTarget, key, "LineAmount", this));
                     }
