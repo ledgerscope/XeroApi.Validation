@@ -32,5 +32,20 @@ namespace XeroApi.Validation.Helpers
         {
             return li.Sum(a => a.GetLineItemTotal());
         }
+
+        //Manual Journals
+
+        public static decimal GetLineItemTotal(this Line li)
+        {
+            var calculatedGross = li.Amount + li.TaxAmount;
+            if (calculatedGross != 0)
+                return calculatedGross;
+            return li.GrossAmount;
+        }
+
+        public static decimal GetLineItemTotal(this IEnumerable<Line> li)
+        {
+            return li.Sum(a => a.GetLineItemTotal());
+        }
     }
 }

@@ -43,9 +43,15 @@ namespace XeroApi.Validation
                 {
                     lineItemValidator.Validate(item, vr);
                 }
+
                 if (vr.Any())
                 {
                     validationResults.AddResult(new ValidationResult("Invalid LineItems", currentTarget, key, "LineItems", this, vr));
+                }
+
+                if (objectToValidate.Lines.GetLineItemTotal() != 0)
+                {
+                    validationResults.AddResult(new ValidationResult("LineItems don't balance", currentTarget, key, "LineItems", this, vr));
                 }
             }
         }

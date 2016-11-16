@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>XeroApi.Validation</id>
-    <version>2.1.4.2</version>
+    <version>2.1.4.3</version>
     <title>XeroApi.Validation</title>
     <authors>matthewsteeples</authors>
     <owners>matthewsteeples</owners>
@@ -16,7 +16,7 @@
       This package now depends on the new (supported) official Xero wrapper library
     </description>
     <releaseNotes>
-      Allow zero value line items if no account code specified (Description Only)
+      Flag up an error if ManualJournal doesn't balance
     </releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Xero</tags>
