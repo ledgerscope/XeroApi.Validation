@@ -27,7 +27,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Debug\XeroApi.Validation.dll" target="lib\net45\XeroApi.Validation.dll" />
-    <file src="bin\Debug\XeroApi.Validation.pdb" target="lib\net45\XeroApi.Validation.pdb" />
+    <file src="bin\Release\XeroApi.Validation.dll" target="lib\net45\XeroApi.Validation.dll" />
+    <file src="bin\Release\XeroApi.Validation.pdb" target="lib\net45\XeroApi.Validation.pdb" />
   </files>
 </package>
