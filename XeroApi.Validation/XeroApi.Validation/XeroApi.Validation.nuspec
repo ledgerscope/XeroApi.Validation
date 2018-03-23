@@ -23,7 +23,7 @@
     <dependencies>
       <dependency id="EnterpriseLibrary.Validation" version="6.0.1304.0" />
       <dependency id="Unity" version="3.5.1404.0" />
-      <dependency id="Xero.API.SDK.Minimal" version="2.1.4.0" />
+      <dependency id="Xero.API.SDK.Minimal" version="2.2.2-CI-20180323-153114" />
     </dependencies>
   </metadata>
   <files>
