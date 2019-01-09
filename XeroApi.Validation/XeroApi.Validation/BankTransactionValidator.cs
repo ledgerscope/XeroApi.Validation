@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Xero.Api.Core.Model;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 using XeroApi.Validation.Helpers;
-using Microsoft.Practices.Unity;
-using Xero.Api.Core.Model.Types;
 using XeroApi.Validation.Extensions;
+using Unity;
 
 namespace XeroApi.Validation
 {

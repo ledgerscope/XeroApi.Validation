@@ -4,6 +4,7 @@ using Microsoft.Practices.Unity;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 using Xero.Api.Common;
 using Xero.Api.Core.Model;
+using Unity;
 
 namespace XeroApi.Validation.Helpers
 {
