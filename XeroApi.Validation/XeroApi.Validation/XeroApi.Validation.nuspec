@@ -18,7 +18,7 @@
     <tags>Xero</tags>
     <dependencies>
       <dependency id="EnterpriseLibrary.Validation" version="6.0.1304" />
-      <dependency id="Unity" version="5.8.13" />
+      <dependency id="Unity.Container" version="5.9.3" />
       <dependency id="Xero.API.SDK.Minimal" version="2.2.0" />
     </dependencies>
   </metadata>
