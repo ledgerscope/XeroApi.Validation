@@ -64,7 +64,7 @@
       <HintPath>..\packages\Xero.API.SDK.Minimal.2.2.2-CI-20180323-153114\lib\net40\Xero.Api.dll</HintPath>
     </Reference>
     <Reference Include="Xero.Api.Example.Applications, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xero.API.SDK.Minimal.2.2.2-CI-20180323-153114\lib\net40\Xero.Api.Example.Applications.dll</HintPath>
+      <HintPath>..\packages\Xero.API.SDK.Minimal.2.3.0-CI-20200430-133840\lib\net40\Xero.Api.Example.Applications.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
